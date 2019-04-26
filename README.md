@@ -1,28 +1,9 @@
-# icd-mongodb-cfenv-processor
+# icd-mongodb-cfenv-test
 
-A CfEnvProcessor for ICD MongoDB.
+A Test project using the CfEnvProcessor for ICD MongoDB.
 
-Or.. it will be, when it's done =)
+Nothing much to see here, just a quick PoC to test if the ICD MongoDB CfEnvProcessor works as expected.
 
-It builds on top of : 
-
-https://github.com/BarDweller/ssl-context-spring-boot-starter
-
-https://github.com/BarDweller/bean-customizer-spring-boot
+- https://github.com/BarDweller/icd-mongodb-cfenv-processor
 
 
-The former creates sslcontexts using application.properties entries.
-The latter is a quick common approach to tailoring config beans in spring. 
-
-The intent is this cfenv processor will take the info from vcap services
-and will write out sslcontext information for the ssl-context-spring-boot-starter
-and will also create properties for a mongo config customizer bean,
-and of course, for spring-data-mongo. 
-
-Net result should be spring-data configured to talk to mongo, with a 
-customized config that will add an ssl context based on the vcap_services info.
-
-At the mo, this project is just a test framework making sure that the above will work.
-
-It does not (yet) contain the actual cf-enf-processor, and isn't suitable yet
-to be used as a library.
